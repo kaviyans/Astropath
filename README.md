@@ -90,5 +90,5 @@ Orion Nexus is a smart, interactive, and educational platform designed to simula
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/orion-nexus.git
+   git clone https://github.com/kaviyans/Astropath
    cd orion-nexus
