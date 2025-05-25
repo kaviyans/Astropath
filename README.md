@@ -1,4 +1,4 @@
-# 🚀 Orion Nexus: A Multi-Agent Space Mission Planner & Astronomical Assistant
+# 🚀 AstroPath : A Multi-Agent Space Mission Planner & Astronomical Assistant
 
 Orion Nexus is a smart, interactive, and educational platform designed to simulate space missions and plan astronomical observations. Built using real-time data from NASA, Skyfield, and weather APIs, this project is ideal for students, educators, and space enthusiasts who want a realistic yet simplified mission control experience.
 
