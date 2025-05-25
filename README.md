@@ -1,166 +1,94 @@
-🚀 Orion Nexus: A Multi-Agent Space Mission Planner & Astronomical Assistant
-Orion Nexus is a web-based multi-agent simulation and planning platform that enables users to plan interplanetary space missions and discover upcoming celestial events using real-time astronomical data. Designed for students, educators, and space enthusiasts, it blends educational visualization with intelligent agent coordination.
+# 🚀 Orion Nexus: A Multi-Agent Space Mission Planner & Astronomical Assistant
 
-—
+Orion Nexus is a smart, interactive, and educational platform designed to simulate space missions and plan astronomical observations. Built using real-time data from NASA, Skyfield, and weather APIs, this project is ideal for students, educators, and space enthusiasts who want a realistic yet simplified mission control experience.
 
-🌌 Table of Contents
+---
 
-🔭 Features
+## 🌌 Table of Contents
 
-🤖 Multi-Agent Architecture
+- [🔭 Features](#-features)
+- [🤖 Multi-Agent Architecture](#-multi-agent-architecture)
+- [🧠 Team Roles](#-team-roles)
+- [🧰 Tech Stack](#-tech-stack)
+- [🌐 Live APIs & Data Sources](#-live-apis--data-sources)
+- [⚙️ Setup Instructions](#️-setup-instructions)
+- [👨‍💻 Contributors](#-contributors)
+- [📄 License](#-license)
+- [🌟 Acknowledgements](#-acknowledgements)
 
-🧠 Team Roles
+---
 
-🧰 Tech Stack
+## 🔭 Features
 
-🌐 Live APIs & Data Sources
+- Plan missions from Earth to other planets using live orbital data.
+- Determine best launch windows based on planetary alignment.
+- Calculate fuel requirements and Δv using simplified astrodynamics.
+- Visualize orbits and planetary paths in 2D/3D.
+- Discover upcoming celestial events (eclipses, ISS passes, meteor showers).
+- Get weather-based recommendations for observation or launch.
+- Interactive AI-powered Mission Assistant.
 
-📸 Screenshots (Optional)
+---
 
-⚙️ Setup Instructions
+## 🤖 Multi-Agent Architecture
 
-👨‍💻 Contributors
+| Agent Name             | Functionality                                                                 |
+|------------------------|-------------------------------------------------------------------------------|
+| Trajectory Agent       | Computes orbital paths (e.g., Hohmann transfer) using Skyfield/NASA APIs.    |
+| Launch Window Agent    | Determines ideal planetary alignment dates.                                  |
+| Fuel Agent             | Simulates required Δv and fuel based on spacecraft and mission type.         |
+| Weather Agent          | Fetches weather/cloud data at launch or observation site.                    |
+| Event Agent            | Fetches upcoming space events via NASA or timeanddate APIs.                  |
+| Geo Agent              | Gets user's location and visibility conditions.                              |
+| Recommendation Agent   | Suggests best observation or launch times.                                   |
+| Mission Control Agent  | Main coordinator and user interaction manager.                               |
 
-📄 License
+---
 
-—
+## 🧠 Team Roles
 
-🔭 Features
+| Name               | Designation                                                   | Skills                                      |
+|--------------------|---------------------------------------------------------------|---------------------------------------------|
+| Kaviyan S          | Chief Systems Architect & Mission Interface Commander         | Full Stack · DSA · Logical Thinking         |
+| Lakshmi Narayanan  | Orbital Mechanics Strategist & Computational Analyst          | DSA · Algorithms · Aptitude · Mathematics   |
+| Madhan Kumar M     | Autonomous Intelligence Architect & Multi-Agent Orchestrator  | AI Logics · Automation · Logical Reasoning  |
 
-Plan space missions (e.g. Earth to Mars) using realistic data
+---
 
-Get optimal launch windows, Δv, and fuel estimates
+## 🧰 Tech Stack
 
-Visualize orbital paths in 2D/3D
+### Frontend:
+- HTML / CSS / JavaScript
+- Streamlit (for interactive dashboard)
+- Plotly / Three.js (for orbit visualizations)
 
-Discover upcoming celestial events (ISS passes, meteor showers)
+### Backend:
+- Python
+- FastAPI / Flask
 
-Personalized observation suggestions with weather integration
+### Libraries & Tools:
+- Skyfield
+- Astroquery / PyEphem
+- NumPy / Matplotlib
+- OpenWeatherMap API
+- NASA APIs
+- IPinfo / Geolocation APIs
 
-AI-based educational assistant to guide users through planning
+---
 
-Download/share mission reports or stargazing cards
+## 🌐 Live APIs & Data Sources
 
-—
+- NASA APIs: https://api.nasa.gov
+- Skyfield Ephemeris: https://rhodesmill.org/skyfield/
+- OpenWeatherMap: https://openweathermap.org/api
+- Time and Date: https://www.timeanddate.com
+- IPinfo Location API: https://ipinfo.io/
 
-🤖 Multi-Agent Architecture
+---
 
-Agent Name	Role & Description
-Trajectory Agent	Computes orbital transfers (e.g., Hohmann transfer) using Skyfield or NASA APIs
-Launch Window Agent	Calculates best dates to launch based on planetary alignment
-Fuel Agent	Simulates Δv requirements and spacecraft fuel usage
-Weather Agent	Checks launch site/cloud visibility weather (via OpenWeatherMap)
-Event Agent	Fetches upcoming events like eclipses, meteor showers (NASA, Timeanddate, etc.)
-Geo Agent	Determines best observation spots via user location
-Recommendation Agent	Suggests ideal mission schedules and stargazing times
-Mission Control (UI)	Takes user input, handles coordination between agents
+## ⚙️ Setup Instructions
 
-—
-
-🧠 Team Roles
-
-Name	Designation	Skills
-Kaviyan S	Chief Systems Architect & Mission Interface Commander	Full Stack · DSA · Logical Thinking
-Lakshmi Narayanan	Orbital Mechanics Strategist & Computational Analyst	DSA · Algorithms · Aptitude · Mathematics
-Madhan Kumar M	Autonomous Intelligence Architect & Multi-Agent Orchestrator	AI Logics · Automation · Logic Building
-
-—
-
-🧰 Tech Stack
-
-Frontend:
-
-HTML / CSS / JavaScript
-
-Streamlit (for rapid dashboard prototyping)
-
-Plotly / Three.js (for orbital visualizations)
-
-Backend:
-
-Python
-
-FastAPI / Flask
-
-Libraries & Tools:
-
-Skyfield (planetary positions)
-
-Astroquery / PyEphem (astronomical calculations)
-
-NumPy, Matplotlib (math/visuals)
-
-OpenWeatherMap API (weather)
-
-NASA Open APIs (ephemeris data)
-
-IPinfo / Geolocation APIs
-
-—
-
-🌐 Live Data Sources & APIs
-
-NASA APIs: https://api.nasa.gov
-
-Skyfield Ephemeris: https://rhodesmill.org/skyfield/
-
-OpenWeatherMap: https://openweathermap.org/api
-
-IP Geolocation: https://ipinfo.io/
-
-Time and Date API: https://www.timeanddate.com/
-
-—
-
-📸 Screenshots (Coming Soon)
-
-📊 Mission Planner UI
-🪐 Orbital Path Visualizer
-📅 Stargazing Recommendations Card
-📍 Map-based Best Viewing Locations
-
-—
-
-⚙️ Setup Instructions
-
-Clone the repository:
-
-git clone https://github.com/yourusername/orion-nexus.git
-cd orion-nexus
-
-Install dependencies:
-
-pip install -r requirements.txt
-
-Run the backend server:
-
-uvicorn main:app --reload
-
-Launch the frontend:
-
-streamlit run ui_dashboard.py
-
-—
-
-👨‍💻 Contributors
-
-✨ Kaviyan S – Full Stack & Architecture
-🔬 Lakshmi Narayanan – Backend Logic & Orbital Math
-🧠 Madhan Kumar M – AI Planner & Agent Intelligence
-
-—
-
-📄 License
-
-This project is licensed under the MIT License.
-See LICENSE for details.
-
-—
-
-🌟 Acknowledgements
-
-Inspired by NASA Mission Planning tools, ISRO’s Aryabhata & Chandrayaan, and Carl Sagan’s vision of cosmic curiosity.
-
-Open-source data powered by NASA, Skyfield, and OpenWeatherMap.
-
-—
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/orion-nexus.git
+   cd orion-nexus
