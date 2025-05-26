@@ -4,17 +4,22 @@ Orion Nexus is a smart, interactive, and educational platform designed to simula
 
 ---
 
+## Project - Status : ---IN PROGRESS --
+
 ## 🌌 Table of Contents
 
-- [🔭 Features](#-features)
-- [🤖 Multi-Agent Architecture](#-multi-agent-architecture)
-- [🧠 Team Roles](#-team-roles)
-- [🧰 Tech Stack](#-tech-stack)
-- [🌐 Live APIs & Data Sources](#-live-apis--data-sources)
-- [⚙️ Setup Instructions](#️-setup-instructions)
-- [👨‍💻 Contributors](#-contributors)
-- [📄 License](#-license)
-- [🌟 Acknowledgements](#-acknowledgements)
+- [🚀 AstroPath : A Multi-Agent Space Mission Planner \& Astronomical Assistant](#-astropath--a-multi-agent-space-mission-planner--astronomical-assistant)
+  - [Project - Status : ---IN PROGRESS --](#project---status-----in-progress---)
+  - [🌌 Table of Contents](#-table-of-contents)
+  - [🔭 Features](#-features)
+  - [🤖 Multi-Agent Architecture](#-multi-agent-architecture)
+  - [🧠 Team Roles](#-team-roles)
+  - [🧰 Tech Stack](#-tech-stack)
+    - [Frontend:](#frontend)
+    - [Backend:](#backend)
+    - [Libraries \& Tools:](#libraries--tools)
+  - [🌐 Live APIs \& Data Sources](#-live-apis--data-sources)
+  - [⚙️ Setup Instructions](#️-setup-instructions)
 
 ---
 
