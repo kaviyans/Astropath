@@ -97,3 +97,162 @@ Orion Nexus is a smart, interactive, and educational platform designed to simula
    ```bash
    git clone https://github.com/kaviyans/Astropath
    cd Astropath
+
+---
+
+## 🤖 What is an “Agent”?
+
+In AI and software systems, an **agent** is an independent program (or microservice) that:
+
+* **Perceives** information from its environment.
+* **Processes** it using rules or models.
+* **Acts** or gives output (suggestions, alerts, decisions).
+  Each agent has a **goal** and **autonomy**, yet collaborates with others in a system like a real **space agency mission team**.
+
+---
+
+## 🛰️ AstroPath Agents — Roles, Design & Workflows
+
+---
+
+### 1. **Trajectory Agent**
+
+* **Goal:** Calculate the best path to travel between planets.
+* **Inputs:** Start date, source planet, destination planet.
+* **Output:** Orbital trajectory, travel time, delta-v required.
+* **How to Make It Work:**
+
+  * Use `Skyfield` to get planetary positions.
+  * Implement Hohmann transfer or Lambert's problem using orbital mechanics formulas.
+  * Respond with optimal path based on energy-efficient routes.
+* **Acts like an Agent by:**
+
+  * Reacting to user destination choices.
+  * Calculating and updating route if launch date or planet changes.
+
+---
+
+### 2. **Launch Window Agent**
+
+* **Goal:** Find the best date to launch based on planetary alignment.
+* **Inputs:** Source and target planets, mission duration.
+* **Output:** Best launch windows (dates).
+* **How to Make It Work:**
+
+  * Use `Skyfield` or `Astroquery` to get ephemerides.
+  * Compute angular positions between planets to find closest approach dates.
+* **Acts like an Agent by:**
+
+  * Watching planetary motion and triggering updates when optimal conditions approach.
+
+---
+
+### 3. **Fuel Agent**
+
+* **Goal:** Calculate fuel and Δv requirements.
+* **Inputs:** Spacecraft model, trajectory, payload.
+* **Output:** Required propellant, optimal fuel type.
+* **How to Make It Work:**
+
+  * Use Tsiolkovsky Rocket Equation.
+  * Store spacecraft configurations (mass, Isp) in a dictionary or DB.
+* **Acts like an Agent by:**
+
+  * Listening to trajectory and payload changes.
+  * Recalculating when constraints change.
+
+---
+
+### 4. **Weather Agent**
+
+* **Goal:** Predict weather at launch site to approve/reject launch.
+* **Inputs:** Location, launch date.
+* **Output:** Weather condition (cloud cover, wind, storms).
+* **How to Make It Work:**
+
+  * Query OpenWeatherMap API for forecast.
+  * Logic: If cloud > 80% or wind > threshold → recommend delay.
+* **Acts like an Agent by:**
+
+  * Fetching real-time data, alerting Mission Control to reschedule.
+
+---
+
+### 5. **Mission Control Agent** *(Main Brain)*
+
+* **Goal:** Manage all agents, combine insights, interact with the user.
+* **Inputs:** User input (target, budget), agent outputs.
+* **Output:** Final plan, alerts, user feedback.
+* **How to Make It Work:**
+
+  * Use `FastAPI` or `LangChain`-style flow manager.
+  * Acts as the **central orchestrator**:
+
+    * Receives all agent outputs.
+    * Applies mission rules (e.g., can't launch if weather is bad).
+    * Makes final decisions based on agent consensus.
+* **Acts like an Agent by:**
+
+  * Governing and re-routing decisions based on dynamic agent data.
+
+---
+
+### 6. **Event Agent**
+
+* **Goal:** Find upcoming celestial events like meteor showers, eclipses.
+* **Inputs:** User location/date.
+* **Output:** List of events and viewing conditions.
+* **How to Make It Work:**
+
+  * Use NASA APIs or scrape from `TimeAndDate.com`.
+  * Maintain a calendar of events.
+* **Acts like an Agent by:**
+
+  * Constantly monitoring external APIs.
+  * Notifying users when events are visible in their area.
+
+---
+
+### 7. **Geo Agent**
+
+* **Goal:** Get user’s location for visibility and event planning.
+* **Inputs:** User IP or manual input.
+* **Output:** Latitude/longitude.
+* **How to Make It Work:**
+
+  * Use `Geopy` or `IPinfo` API.
+* **Acts like an Agent by:**
+
+  * Providing live geographic context to other agents (Event, Weather).
+
+---
+
+### 8. **Recommendation Agent**
+
+* **Goal:** Suggest best times and places to view space events.
+* **Inputs:** Weather, event data, geo-location.
+* **Output:** Time and spot for best viewing.
+* **How to Make It Work:**
+
+  * Combine weather and event visibility rules.
+  * Logic: Suggest only if cloud < 30% and event peak visible.
+* **Acts like an Agent by:**
+
+  * Filtering and scoring conditions to give final suggestion.
+
+---
+
+### 9. **Scientist Agent (UI Agent)**
+
+* **Goal:** Present all the information clearly to the user.
+* **Inputs:** Data from all agents.
+* **Output:** Graphs, maps, alerts, chat summaries.
+* **How to Make It Work:**
+
+  * Acts as the **visual face** of the AI.
+  * Uses frameworks like Streamlit or Next.js to display data interactively.
+* **Acts like an Agent by:**
+
+  * Listening to all backend outputs and keeping the UI updated dynamically.
+
+---
