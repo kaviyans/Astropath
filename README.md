@@ -3,6 +3,7 @@
 Orion Nexus is a smart, interactive, and educational platform designed to simulate space missions and plan astronomical observations. Built using real-time data from NASA, Skyfield, and weather APIs, this project is ideal for students, educators, and space enthusiasts who want a realistic yet simplified mission control experience.
 
 ---
+Google Adk Resource-[https://google.github.io/adk-docs/]
 
 ## Project - Status : ---IN PROGRESS --
 
