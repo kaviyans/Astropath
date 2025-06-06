@@ -1,0 +1,16 @@
+#Trajectory_agent
+skyfield==1.45
+numpy==1.26.4
+
+#Fuel_agent
+numpy
+pandas
+matplotlib
+
+#Launch_window_agent
+skyfield==1.45
+numpy==1.26.4
+
+#weather_agent
+requests
+
